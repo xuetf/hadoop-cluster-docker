@@ -12,7 +12,7 @@ sudo docker run -itd \
                 --net=hadoop \
                 -p 50070:50070 \
                 -p 8088:8088 \
-                -p 8887:8887 \
+                -p 8887:8889 \
                 --name hadoop-master \
                 --hostname hadoop-master \
                 ${image_name}
