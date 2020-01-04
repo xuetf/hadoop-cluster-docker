@@ -15,6 +15,7 @@ sudo docker run -itd \
                 -p 8887:8889 \
                 --name hadoop-master \
                 --hostname hadoop-master \
+                -v /home/ec2-user/workspace/master:/workspace \
                 ${image_name}
 
 
@@ -28,6 +29,7 @@ do
 	                --net=hadoop \
 	                --name hadoop-slave$i \
 	                --hostname hadoop-slave$i \
+	                -v /home/ec2-user/workspace/slave$i:/workspace \
 	                ${image_name}
 	i=$(( $i + 1 ))
 done 
