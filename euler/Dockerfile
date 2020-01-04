@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y openssh-server
 
 
 # set environment variable
+ENV JAVA_HOME /usr/lib/jvm/java-11-openjdk-amd64
 ENV HADOOP_HOME=/usr/local/hadoop-2.9.2
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
 
